@@ -1,19 +1,118 @@
 #include <iostream>
 #include <chrono>
-#include <vector>
-int hashing(std::string &str);
+int hashing(std::string& str);
 
 
 int main(){
 
+std::vector<std::string> str = { "helpless",
+"friendly",
+"hospital",
+"medieval",
+"rotation",
+"official",
+"constant",
+"stubborn",
+"bathroom",
+"decisive",
+"rhetoric",
+"tropical",
+"category",
+"relation",
+"momentum",
+"movement",
+"unlikely",
+"complain",
+"motorist",
+"collapse",
+"superior",
+"quantity",
+"casualty",
+"champion",
+"campaign",
+"original",
+"epicalyx",
+"negative",
+"equation",
+"colorful",
+"mutation",
+"imposter",
+"employee",
+"abstract",
+"composer",
+"restrain",
+"prisoner",
+"broccoli",
+"invasion",
+"sunshine",
+"computer",
+"detector",
+"minority",
+"hardship",
+"discreet",
+"railroad",
+"exchange",
+"practice",
+"activate",
+"adoption",
+"electron",
+"employee",
+"straight",
+"election",
+"greeting",
+"prospect",
+"assembly",
+"marriage",
+"syndrome",
+"evaluate",
+"estimate",
+"delivery",
+"forecast",
+"emphasis",
+"minister",
+"resource",
+"contract",
+"merchant",
+"sickness",
+"economic",
+"casualty",
+"infinite",
+"flexible",
+"birthday",
+"abortion",
+"resident",
+"superior",
+"memorial",
+"appetite",
+"carriage",
+"feminist",
+"unlawful",
+"abundant",
+"survival",
+"theorist",
+"activate",
+"spectrum",
+"sentence",
+"separate",
+"implicit",
+"detector",
+"hardship",
+"sandwich",
+"threaten",
+"overview",
+"struggle",
+"rotation",
+"incident",
+"prisoner",
+"familiar" };
 
-std::string str;
-std::cout << "Input-:";
-std::cin >> str;
-hashing(str);
-std::cout << " _______________________________________________________________________" << std::endl;
-std::cout << "|--This program is made by a username \"NOTRAJAT\" @github---------------|" << std::endl;
-std::cout << "|--Special thanks to \"learnmeabitcoin\" @YouTube------------------------|" << std::endl;
-std::cout << "|--for the explaination video link:https://youtu.be/f9EbD6iY9zI--------|" << std::endl;
-std::cout << "|______________________________________________________________________|" << std::endl;
+	
+	auto start = std::chrono::high_resolution_clock::now();
+	for (int i = 0; i < 100; i++) {
+		hashing(str[i]);
+	}
+	auto end= std::chrono::high_resolution_clock::now();
+	std::chrono::duration<float> duration = end - start;
+	std::cout << duration.count()  << std::endl;
+
 }

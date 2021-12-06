@@ -1,9 +1,11 @@
 #pragma once
 #include <iostream>
 #include <vector>
+
 //vector display
 void display(std::vector<std::string>& var);
-
+//hashing
+int hashing(std::string& str);
 
 //message.cpp
 void msg_block(std::string& str, std::vector<std::string>& output_arr);
